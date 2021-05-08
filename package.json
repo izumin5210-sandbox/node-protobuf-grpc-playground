@@ -1,0 +1,9 @@
+{
+  "name": "node-protobuf-grpc-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/izumin5210-sandbox/node-protobuf-grpc-playground",
+  "author": "izumin5210 <m@izum.in>",
+  "license": "MIT",
+  "private": true
+}
