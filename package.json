@@ -5,5 +5,8 @@
   "repository": "https://github.com/izumin5210-sandbox/node-protobuf-grpc-playground",
   "author": "izumin5210 <m@izum.in>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
 }
