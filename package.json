@@ -10,8 +10,11 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "frolint": "^2.6.0",
+    "jest": "^26.6.3",
     "lerna": "^4.0.0",
+    "ts-jest": "^26.5.6",
     "typescript": "^4.2.4"
   },
   "frolint": {
