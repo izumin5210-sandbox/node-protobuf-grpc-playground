@@ -2,7 +2,7 @@ import * as grpc from "@grpc/grpc-js";
 import * as protoLoader from "@grpc/proto-loader";
 import * as glob from "glob";
 import * as path from "path";
-import { createServer } from "./server";
+import { createServer } from "./";
 import { ProtoGrpcType } from "./__generated__/echo_service";
 import { EchoResponse } from "./__generated__/testapis/EchoResponse";
 

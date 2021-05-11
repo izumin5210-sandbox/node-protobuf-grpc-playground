@@ -1,7 +1,7 @@
 import * as grpc from "@grpc/grpc-js";
 import { EchoServiceClient } from "./__generated__/testapis/echo_service_grpc_pb";
 import { EchoRequest, EchoResponse, Message } from "./__generated__/testapis/echo_service_pb";
-import { createServer } from "./server";
+import { createServer } from "./";
 
 it("requests successfully", async () => {
   const server = await createServer();
