@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+ROOT_DIR=$(dirname $0)/..
+PROTO_DIR="${ROOT_DIR}/../../protos"
+OUT_DIR="${ROOT_DIR}/src/__generated__"
+
+rm -rf ${OUT_DIR}
+mkdir ${OUT_DIR}
+
+yarn proto-loader-gen-types \
+  -I "${PROTO_DIR}" \
+  --longs=String \
+  --enums=String \
+  --defaults \
+  --oneofs \
+  --grpcLib=@grpc/grpc-js \
+  --outDir="${OUT_DIR}" \
+  ${PROTO_DIR}/testapis/*.proto
