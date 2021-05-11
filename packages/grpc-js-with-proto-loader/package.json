@@ -1,7 +1,7 @@
 {
   "name": "grpc-js-with-proto-loader",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -10,6 +10,9 @@
     "glob": "^7.1.7"
   },
   "scripts": {
+    "prebuild": "yarn clean && yarn generate",
+    "build": "tsc --build .",
+    "clean": "rm -rf lib",
     "generate": "./scripts/compile-proto",
     "test": "jest"
   },

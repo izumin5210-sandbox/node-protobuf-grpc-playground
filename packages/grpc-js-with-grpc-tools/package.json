@@ -1,7 +1,7 @@
 {
   "name": "grpc-js-with-grpc-tools",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -9,6 +9,9 @@
     "google-protobuf": "^3.17.0-rc.1"
   },
   "scripts": {
+    "prebuild": "yarn clean && yarn generate",
+    "build": "tsc --build .",
+    "clean": "rm -rf lib",
     "generate": "./scripts/compile-proto",
     "test": "jest"
   },
