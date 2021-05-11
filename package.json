@@ -22,6 +22,12 @@
     "test": "yarn lerna run test"
   },
   "frolint": {
+    "eslint": {
+      "ignorePath": "./.eslintignore"
+    },
+    "prettier": {
+      "ignorePath": "./.prettierignore"
+    },
     "typescript": true
   }
 }
