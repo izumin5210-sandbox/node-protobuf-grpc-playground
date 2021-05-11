@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+ROOT_DIR=$(dirname $0)/..
+PROTO_DIR="${ROOT_DIR}/../../protos"
+OUT_DIR="${ROOT_DIR}/src/__generated__"
+
+rm -rf ${OUT_DIR}
+mkdir ${OUT_DIR}
+
+yarn pbjs \
+  -t static-module \
+  -w commonjs \
+  -o "${OUT_DIR}/testapis.js" \
+  ${PROTO_DIR}/testapis/*.proto
+
+yarn pbts \
+  -o "${OUT_DIR}/testapis.d.ts" \
+  "${OUT_DIR}/testapis.js"

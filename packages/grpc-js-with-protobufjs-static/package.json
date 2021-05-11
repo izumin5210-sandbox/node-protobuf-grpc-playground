@@ -1,0 +1,22 @@
+{
+  "name": "grpc-js-with-protobufjs-static",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@grpc/grpc-js": "^1.3.0",
+    "google-protobuf": "^3.17.0-rc.1",
+    "protobufjs": "^6.11.2"
+  },
+  "devDependencies": {
+    "grpc-js-with-proto-loader": "1.0.0"
+  },
+  "scripts": {
+    "prebuild": "yarn clean && yarn generate",
+    "build": "tsc --build .",
+    "clean": "rm -rf lib",
+    "generate": "./scripts/compile-proto",
+    "test": "jest"
+  }
+}
